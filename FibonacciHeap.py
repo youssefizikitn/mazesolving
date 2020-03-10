@@ -54,6 +54,15 @@ class FibHeap:
             node.parent = None
             node.mark = False
             self.degree -= 1
+
+        def __lt__(self, other):
+            return self.value < other.value
+
+        def __gt__(self, other):
+            return self.value > other.value
+
+        def __eq_(self, other):
+            return self.value == other.value
     #### End of Node Class ####
 
     def __init__ (self):
